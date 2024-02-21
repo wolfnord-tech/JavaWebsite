@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Магистратура</title>
+    <title>Академия мобильной разработки</title>
     <style>
         .navbar {
             background-color: #f8f9fa;
@@ -25,7 +25,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Магистратура на Java Spring</a>
+        <a class="navbar-brand" href="/">Академия мобильной разработки</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Карьерные возможности после магистратуры</title>
+    <title>Карьерные возможности после академии мобильной разработки</title>
     <style>
         body {
             background-color: #f8f9fa;
@@ -69,12 +69,12 @@
 
 <body>
 <div class="container">
-    <h1>Карьерные возможности после магистратуры</h1>
+    <h1>Карьерные возможности после академии мобильной разработки</h1>
 
     <div class="card">
         <div class="card-body">
             <h3 class="card-title">1. Высокооплачиваемые специализированные должности</h3>
-            <p class="card-text">После магистратуры вы становитесь специалистом с глубокими знаниями и опытом в
+            <p class="card-text">После академии мобильной разработки вы становитесь специалистом с глубокими знаниями и опытом в
                 выбранной области.
                 Это позволяет вам претендовать на высокооплачиваемые специализированные должности и повысить свой
                 доход.</p>
@@ -84,7 +84,7 @@
     <div class="card">
         <div class="card-body">
             <h3 class="card-title">2. Возможность заниматься исследованиями и разработками</h3>
-            <p class="card-text">Магистратура дает вам возможность продолжить заниматься научной деятельностью и
+            <p class="card-text">Академия мобильной разработки дает вам возможность продолжить заниматься научной деятельностью и
                 участвовать
                 в разработках. Вы сможете работать над интересными проектами и вносить вклад в развитие науки и
                 технологий.</p>
@@ -94,11 +94,19 @@
     <div class="card">
         <div class="card-body">
             <h3 class="card-title">3. Широкие возможности для карьерного роста</h3>
-            <p class="card-text">Магистратура поможет вам углубить свои знания и навыки в выбранной области, что
+            <p class="card-text">Академия мобильной разработки поможет вам углубить свои знания и навыки в выбранной области, что
                 открывает
                 широкие возможности для карьерного роста. Вы сможете занимать руководящие должности и принимать
                 важные
                 решения в своей области деятельности.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck">
+    <div class="card" th:each="testimonial : ${testimonials}">
+        <div class="card-body">
+            <p class="card-text" th:text="${testimonial.comment}">Академия мобильной разработки 2024 @ Все права защищены<br> [Академический проект по технологиям разработки программных приложений]</p>
         </div>
     </div>
 </div>

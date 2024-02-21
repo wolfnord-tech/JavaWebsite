@@ -1,5 +1,9 @@
 package com.example.Java_practise_15.controllers;
 
+import java.util.Locale;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     @GetMapping("/")
-    public String maga(Model model) {
+    public String academy(Model model) {
         model.addAttribute("name","Главная страница");
-        return "maga";
+        return "academy";
     }
     @GetMapping("/advantages")
     public String advantages(Model model) {
@@ -23,11 +27,15 @@ public class MainController {
         model.addAttribute("name","Главная страница");
         return "about";
     }
-    @GetMapping("/career")
-    public String career(Model model) {
-        model.addAttribute("name","Главная страница");
-        return "career";
-    }
+    @Autowired
+private MessageSource messageSource;
+
+@GetMapping("/career")
+public String career(Model model) {
+    model.addAttribute("name", "Главная страница");
+    return "career";
+}
+
 
 
 

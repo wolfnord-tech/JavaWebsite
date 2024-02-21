@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Академия мобильной разработки</title>
+    <style>
+        .navbar {
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Академия мобильной разработки</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/advantages">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">Карьерные возможности</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <section id="about" class="mt-5">
+        <h2 class="mb-4" >О курсе</h2>
+        <p th:text="#{about.description}">Академия мобильной разработки - это уникальное место, где вы сможете получить все необходимые знания и навыки для успешной карьеры в области мобильной разработки. Наша компания специализируется на обучении студентов программированию на языке Kotlin, который является одним из самых популярных и востребованных языков для создания кросс-платформенных приложений. Однако мы также предлагаем курсы по разработке на Flutter, iOS и Android, а также Аврора.</p>
+        <a class="btn btn-primary" href="/about">Узнать больше</a>
+    </section>
+        <br>
+         <div class="card-deck">
+            <div class="card" th:each="testimonial : ${testimonials}">
+                <div class="card-body">
+                    <p class="card-text" th:text="${testimonial.comment}">Академия мобильной разработки 2024 @ Все права защищены<br> [Академический проект по технологиям разработки программных приложений]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

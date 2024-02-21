@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Академия мобильной разработки</title>
+    <style>
+        .navbar {
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Академия мобильной разработки</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/advantages">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">Карьерные возможности</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <section id="about" class="mt-5">
+        <h2 class="mb-4" >О курсе</h2>
+        <p th:text="#{about.description}">Академия мобильной разработки - это уникальное место, где вы сможете получить все необходимые знания и навыки для успешной карьеры в области мобильной разработки. Наша компания специализируется на обучении студентов программированию на языке Kotlin, который является одним из самых популярных и востребованных языков для создания кросс-платформенных приложений. Однако мы также предлагаем курсы по разработке на Flutter, iOS и Android, а также Аврора.</p>
+        <a class="btn btn-primary" href="/about">Узнать больше</a>
+    </section>
+
+    <section id="advantages" class="mt-5">
+        <h2 class="mb-4">Преимущества</h2>
+        <ul class="list-group">
+            <li th:each="advantage : ${advantages}" class="list-group-item" th:text="${advantage}">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>1. Глубокое изучение предметной области</h3>
+                        <p>Академия мобильной разработки предоставляет возможность более глубокого изучения выбранной предметной области. Вы
+                            сможете
+                            расширить свои знания и овладеть новыми навыками, что сделает вас более востребованным специалистом на
+                            рынке
+                            труда.</p>
+                    </div>
+            
+                    <div class="col-md-6">
+                        <h3>2. Профессиональный рост</h3>
+                        <p>Академия мобильной разработки дает возможность углубиться в выбранную профессиональную область и получить более
+                            специализированное образование. Вы сможете получить новые знания и навыки, которые помогут вам
+                            развиваться как
+                            профессионал и повысить свои карьерные возможности.</p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>3. Научная деятельность</h3>
+                        <p>Академия мобильной разработки предоставляет возможность участвовать в научных исследованиях и разработках. Вы сможете
+                            работать
+                            над интересными проблемами и делать свой вклад в развитие науки и технологий.</p>
+                    </div>
+            
+                    <div class="col-md-6">
+                        <h3>4. Создание профессиональной сети</h3>
+                        <p>Во время обучения вы сможете познакомиться с единомышленниками и реальными профессионалами в
+                            выбранной
+                            области. Это создаст для вас возможности для будущих профессиональных связей и коллабораций.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br><a class="btn btn-primary" href="/advantages">Узнать больше</a>
+    </section>
+
+    <section id="career" class="mt-5">
+        <h2 class="mb-4">Карьерные возможности</h2>
+        <p th:text="#{career.description}">По окончании курсов вы сможете получить работу в компаниях, специализирующихся на мобильной разработке, или начать свой собственный проект в этой области. Также полученные знания и навыки позволят вам создавать свои собственные мобильные приложения и игры.</p>
+        <a class="btn btn-primary" href="/career">Узнать больше</a>
+    </section>
+
+    <section id="testimonials" class="mt-5">
+        <h2 class="mb-4">Отзывы студентов</h2>
+
+        <section id="test">
+            <div class="testimonial">
+                <p>"Я очень благодарен, что выбрал этот ресурс. Преподаватели здесь высококвалифицированные и открытые для общения. Моя учебная программа дала мне все необходимые знания и навыки для достижения профессиональных целей" - Иван, студент нашего факультета по кросс-платформенной разработке на Kotlin MultiPlatform.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Академия создает атмосферу академической гармонии, командной работы и творческого развития. Здесь я нашел своих наставников и друзей, с которыми вместе решаем сложные задачи и воплощаем свои идеи в реальность" - Анна, студентка нашего факультета по мобильной разработке под iOS.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Академия предлагает широкий выбор учебных программ и гибкое расписание, что позволяет мне успешно совмещать учебу с работой. Преподаватели всегда готовы помочь и поддержать студентов в их успехах" - Максим, студент нашего факультета по мобильной разработке под Android.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Я с удовольствием учусь в этом академии. Здесь у меня есть возможность применить теоретические знания на практике через участие в исследовательских проектах и стажировках в хорошо известных компаниях. Это дает мне большое преимущество на рынке труда" - Ольга, студентка нашего факультета по Flutter разработке.</p>
+            </div>
+        </section>
+        
+         <div class="card-deck">
+            <div class="card" th:each="testimonial : ${testimonials}">
+                <div class="card-body">
+                    <p class="card-text" th:text="${testimonial.comment}">Академия мобильной разработки 2024 @ Все права защищены<br> [Академический проект по технологиям разработки программных приложений]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
